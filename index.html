@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="connect-dialog" class="connect-dialog">
+        <b>Присоединись к чату</b>
+        <label>
+            <span>Ник: </span>
+            <input type='text' name='secret'/>
+        </label>
+        <label>
+            <span>Секрет: </span>
+            <input type='password' name='secret'/>
+        </label>
+        <button>Присоединиться...</button>
+        <button>Создать чат...</button>
+    </div>
+    <div class="chatbox">
+        <div id="chat-list-box" class="chat-list-box"></div>
+        <div class="input-box">
+            <input multiple type='text'/>
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script>
+        var socket = io()
+    </script>
+</body>
+</html>
